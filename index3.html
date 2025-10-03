@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Shopping Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select,
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .payment-options {
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Online Shopping Form</h2>
+    <form action="#" method="POST">
+      <!-- User Info -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Address -->
+      <label for="address">Shipping Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <!-- Product Selection -->
+      <label for="product">Select Product</label>
+      <select id="product" name="product" required>
+        <option value="">--Choose a Product--</option>
+        <option value="laptop">Laptop - $999</option>
+        <option value="smartphone">Smartphone - $699</option>
+        <option value="headphones">Headphones - $199</option>
+        <option value="watch">Smart Watch - $299</option>
+      </select>
+
+      <!-- Quantity -->
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+
+      <!-- Payment -->
+      <label>Payment Method</label>
+      <div class="payment-options">
+        <input type="radio" id="credit" name="payment" value="Credit Card" required>
+        <label for="credit">Credit Card</label><br>
+
+        <input type="radio" id="paypal" name="payment" value="PayPal">
+        <label for="paypal">PayPal</label><br>
+
+        <input type="radio" id="cod" name="payment" value="Cash on Delivery">
+        <label for="cod">Cash on Delivery</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+</body>
+</html>
